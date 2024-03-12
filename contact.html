@@ -28,6 +28,7 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <link rel="icon" href="images/logo.png" type="image/x-icon">
    </head>
    <!-- body -->
    <body class="main-layout inner_posituong contact_page">
@@ -69,15 +70,17 @@
                                       Products
                                   </a>
                                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <a class="dropdown-item" href="computer.html">Computer</a>
-                                      <a class="dropdown-item" href="laptop.html">Laptop</a>
-                                      <a class="dropdown-item" href="Rams.html">Rams</a>
-                                      <a class="dropdown-item" href="#">Tablet</a>
-                                      <a class="dropdown-item" href="#">Speakers</a>
-                                      <a class="dropdown-item" href="#">Internet</a>
-                                      <a class="dropdown-item" href="#">Hardisk</a>
-                                      <a class="dropdown-item" href="#">Battery</a>
-                                      <a class="dropdown-item" href="#">Drive</a>
+                                    <a class="dropdown-item" href="computer.html">Ordenadores</a>
+                                    <a class="dropdown-item" href="laptop.html">Portatiles</a>
+                                    <a class="dropdown-item" href="Rams.html">Rams</a>
+                                    <a class="dropdown-item" href="product.html">Camara</a>
+                                    <a class="dropdown-item" href="product.html">Altavoces</a>
+                                    <a class="dropdown-item" href="product.html">Internet</a>
+                                    <a class="dropdown-item" href="product.html">Hardisk</a>
+                                    <a class="dropdown-item" href="product.html">Bateria</a>
+                                    <a class="dropdown-item" href="product.html">Lector DVD</a>
+                                    <a class="dropdown-item" href="product.html">Raton</a>
+                                    <a class="dropdown-item" href="product.html">Monitor</a>
                                   </div>
                               </li>
                               <li class="nav-item">
@@ -102,31 +105,70 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Contactanos ahora </h2>
+                     <h2>Contáctanos</h2>
                   </div>
                </div>
             </div>
             <div class="row">
                <div class="col-md-10 offset-md-1">
-                  <form id="request" class="main_form">
+                  <form id="request" action="http://172.22.200.240/resultado.php" method="POST" class="main_form">
                      <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Nombre" type="type" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Nunero de telefono" type="type" name="Phone Number">                          
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Mensaje" type="type" Message="Name">Mensaje </textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Enviar</button>
-                        </div>
+                         <div class="col-md-6">
+                             <label for="name">Nombre:</label>
+                             <input id="name" class="contactus" placeholder="Nombre" type="text" name="Name" required> 
+                         </div>
+                         <div class="col-md-6">
+                             <label for="email">Email:</label>
+                             <input id="email" class="contactus" placeholder="Email" type="email" name="Email" required> 
+                         </div>
+                         <div class="col-md-6">
+                             <label for="phone">Número de teléfono:</label>
+                             <input id="phone" class="contactus" placeholder="Número de teléfono" type="tel" name="Numero_de_telefono" required>                          
+                         </div>
+                         <div class="col-md-6">
+                             <label for="message">Mensaje:</label>
+                             <textarea id="message" class="textarea" placeholder="Mensaje" name="Mensaje" required></textarea>
+                         </div>
+                         <div class="col-md-12">
+                             <label>Tipo de consulta:</label>
+                             <div>
+                                 <input type="checkbox" id="consulta1" name="consulta[]" value="Soporte Técnico">
+                                 <label for="consulta1">Soporte Técnico</label>
+                             </div>
+                             <div>
+                                 <input type="checkbox" id="consulta2" name="consulta[]" value="Ventas">
+                                 <label for="consulta2">Ventas</label>
+                             </div>
+                             <div>
+                                 <input type="checkbox" id="consulta3" name="consulta[]" value="Otros">
+                                 <label for="consulta3">Otros</label>
+                             </div>
+                         </div>
+                         <div class="col-md-12">
+                             <label>¿Cómo nos encontraste?</label>
+                             <div>
+                                 <input type="radio" id="buscar1" name="buscar" value="Recomendación">
+                                 <label for="buscar1">Recomendación</label>
+                             </div>
+                             <div>
+                                 <input type="radio" id="buscar2" name="buscar" value="Búsqueda en Internet">
+                                 <label for="buscar2">Búsqueda en Internet</label>
+                             </div>
+                             <div>
+                                 <input type="radio" id="buscar3" name="buscar" value="Redes Sociales">
+                                 <label for="buscar3">Redes Sociales</label>
+                             </div>
+                         </div>
+                         <div class="col-md-12">
+                             <button type="submit" class="send_btn">Enviar</button>
+                         </div>
+                         <div>
+                           <button type="reset">
+                              <img src="./images/descarga.png" alt="imagen" width="70" height="50" style="vertical-align: middle">
+                            </button>
+                         </div>
                      </div>
-                  </form>
+                 </form>                 
                </div>
             </div>
          </div>
@@ -140,29 +182,28 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                      <img class="logo1" src="images/logo1.png" alt="#"/>
                      <ul class="social_icon">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/francisco-javier-doblado-alonso-604787236/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                        <li><a href="https://github.com/K1K04"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        
                      </ul>
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                     <h3>About Us</h3>
+                     <h3>About</h3>
                      <ul class="about_us">
-                        <li>dolor sit amet, consectetur<br> magna aliqua. Ut enim ad <br>minim veniam, <br> quisdotempor incididunt r</li>
+                        <li>CLA, tu destino tecnológico en Dos Hermanas,<br> ofreciendo asesoramiento profesional y <br>servicios de técnicos expertos para satisfacer <br>todas tus necesidades tecnológicas.</li>
                      </ul>
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                     <h3>Contact Us</h3>
+                     <h3>Contáctanos</h3>
                      <ul class="conta">
-                        <li>dolor sit amet,<br> consectetur <br>magna aliqua.<br> quisdotempor <br>incididunt ut e </li>
+                        <li>¡Contáctanos hoy mismo para recibir asesoramiento profesional <br> y soluciones de expertos en tecnología! <br>Estamos aquí para ayudarte en la Calle España Nº3, Dos Hermanas. ¡Esperamos conocerte pronto!</li>
                      </ul>
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                      <form class="bottom_form">
-                        <h3>Newsletter</h3>
-                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                        <button class="sub_btn">subscribe</button>
+                        <h3>Nuevas Noticias</h3>
+                        <input class="enter" placeholder="Introduce tu gmail" type="text" name="Enter your email">
+                        <button class="sub_btn">subscribete</button>
                      </form>
                   </div>
                </div>
