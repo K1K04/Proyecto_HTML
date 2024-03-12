@@ -119,6 +119,14 @@ button:focus {
      outline: none;
 }
 
+button[type="reset"] {
+     background: none; /* Elimina el fondo */
+     border: none; /* Elimina el borde */
+     padding: 0; /* Elimina el relleno */
+     cursor: pointer; /* Cambia el cursor a puntero al pasar por encima */
+     outline: none; /* Elimina el contorno al hacer clic */
+ } 
+
 ul,
 li,
 ol {
@@ -234,6 +242,54 @@ button {
      margin: 0;
      padding: 0;
 }
+
+
+
+header, nav, main, footer {
+     margin: 20px;
+   }
+   
+   h1 {
+     margin-top: 0;
+   }
+   
+   /* Estilos de la barra de navegación */
+   nav ul {
+     list-style-type: none;
+     padding: 0;
+     margin: 0;
+   }
+   
+   nav ul li {
+     display: inline;
+     margin-right: 10px;
+   }
+   
+   nav ul li a {
+     text-decoration: none;
+     color: blue;
+   }
+   
+   nav ul li a:hover {
+     text-decoration: underline;
+   }
+   
+   /* Estilos de las tablas */
+   table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-bottom: 20px;
+   }
+   
+   th, td {
+     padding: 8px;
+     text-align: left;
+     border-bottom: 1px solid #ddd;
+   }
+   
+   th {
+     background-color: #f2f2f2;
+   }
 
 
 /**-- heading section --**/
@@ -440,7 +496,7 @@ ul.btn li:last-child {
 }
 
 .text-bg figure img {
-     width: 100%;
+     width: 170%;
      padding-top: 70px;
 }
 
@@ -454,6 +510,51 @@ ul.btn li:last-child {
 
 .text_img figure img {
      width: 100%;
+}
+
+#MSI{
+     color: red;
+}
+
+#PC{
+     color: #000;
+}
+
+
+.carousel-item .pepe figure img,
+.carousel-item .kiko figure img,
+.carousel-item .pc figure img{
+    max-width: 116%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-bottom: 20%;
+}
+
+.contact label,
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact textarea {
+     font-family: 'Arial', sans-serif; /* Fuente del texto */
+     font-size: 18px; /* Tamaño del texto */
+     color: #111111; /* Color del texto */
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item .pp figure img {
+     max-width: 100%;
+     height: auto;
+     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20%;
+}
+
+.titlepage h2 strong
+{
+     color: #ff0000;
+     font-size: 94px;
 }
 
 .carousel-caption {
@@ -692,8 +793,23 @@ ul.btn li:last-child {
      line-height: 80px;
 }
 
+#padi{
+     padding-left: 1%;
+     font-family: 'Arial', sans-serif; /* Fuente del texto */
+     font-size: 36px; /* Tamaño del texto */
+     color: #0f0f0f; /* Color del texto */  
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+.imagenes{
+     width: 15%;
+     margin-left: 40%;
+}
+
 .laptop_box {
      margin-right: -50px;
+     width: 120%;
+     height: auto;
 }
 
 .laptop_box figure {
@@ -787,7 +903,9 @@ ul.btn li:last-child {
      background-repeat: no-repeat;
      background-size: 100% 100%;
      padding: 90px 0;
+     color: black;
 }
+ 
 
 .contact .titlepage h2 {
      color: #fff;
@@ -851,6 +969,7 @@ ul.btn li:last-child {
      color: #fff;
      opacity: 1;
 }
+
 
 
 /** end contact section **/
@@ -1081,4 +1200,3 @@ ul.social_icon li a:hover {
 
 
 /** end laptop **/
-
