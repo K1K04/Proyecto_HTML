@@ -72,6 +72,16 @@ h6 {
      margin: 0
 }
 
+.tituloram{
+     font-family: 'Arial', sans-serif; /* Fuente */
+  font-size: 24px; /* Tamaño de fuente */
+  font-weight: bold; /* Grosor de la fuente */
+  color: #333; /* Color del texto */
+  text-transform: uppercase; /* Convertir texto a mayúsculas */
+  margin-bottom: 10px; /* Espacio inferior */
+  letter-spacing: 1px; /* Espaciado entre letras */
+}
+
 h1 {
      font-size: 24px;
 }
@@ -455,7 +465,11 @@ ul.btn li:last-child {
      background: url(../images/cross.png);
      background-repeat: no-repeat;
      bottom: -38px;
-     right: 38px;
+     right: 38px;background-image: url('https://i.pinimg.com/736x/c2/bc/35/c2bc35cae863a6f23e5d1f41e92b344e.jpg');
+     background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el contenedor */
+     background-position: center; /* Centrar la imagen */
+     background-repeat: no-repeat; /* Evitar que la imagen se repita */
+     background-color: #4f4aa6; /* Color de fondo de respaldo */
 }
 .banner_main::after {
      position: absolute;
@@ -642,7 +656,7 @@ ul.btn li:last-child {
 .read_more {
      font-size: 17px;
      background-color: #48ca95;
-     color: #fff !important;
+     color: #202020 !important;
      padding: 13px 0px;
      width: 100%;
      max-width: 190px;
@@ -654,7 +668,7 @@ ul.btn li:last-child {
 
 .read_more:hover {
      background: #000;
-     color: #fff;
+     color: #ffffff;
      transition: ease-in all 0.5s;
 }
 
@@ -761,37 +775,53 @@ ul.btn li:last-child {
 /** end products section **/
 
 
-/** laptop  section **/
+/** laptop1  section **/
 
-.laptop {
+.laptop1 {
      font-family: 'Dosis', sans-serif;
      padding: 130px 0;
-     background-color: #4f4aa6;
-}
-
-.laptop .titlepage {
-     text-align: left;
-     padding-bottom: 0;
-}
-
-.laptop .titlepage p {
+     background-color: #515155; /* Color de fondo de respaldo */
+   }
+   
+   .laptop1 .titlepage {
+     text-align: center;
+     padding-bottom: 50px; /* Reducir el espacio inferior */
+   }
+   
+   .laptop1 .titlepage p {
      color: #fff;
-     display: block;
-     font-size: 40px;
+     font-size: 18px; /* Reducir el tamaño de fuente */
      font-weight: normal;
      padding-bottom: 24px;
-     line-height: 40px;
-}
-
-.laptop .titlepage h2 {
-     text-transform: none;
-     font-size: 80px;
-     color: #fff;
-     max-width: inherit;
-     border: inherit;
+     line-height: 28px; /* Ajustar la altura de línea */
+   }
+   
+   .laptop1 .titlepage h2 {
+     text-transform: uppercase; /* Convertir texto a mayúsculas */
+     font-size: 60px; /* Reducir el tamaño de fuente */
+     color: #000; /* Cambiar el color del texto a negro */
      font-weight: 500;
-     line-height: 80px;
-}
+     line-height: 70px; /* Ajustar la altura de línea */
+     margin-bottom: 20px; /* Agregar espacio inferior */
+   }
+   
+   .imagenes {
+     width: 100%; /* Ajustar el ancho de la imagen */
+     max-width: 400px; /* Establecer un ancho máximo */
+     display: block; /* Mostrar como bloque */
+     margin: 0 auto 30px; /* Centrar la imagen y agregar espacio inferior */
+   }
+   
+   .laptop1_box {
+     margin-right: -50px; /* Ajustar el margen derecho */
+     width: 100%; /* Ajustar el ancho al 100% */
+     max-width: 1200px; /* Establecer un ancho máximo */
+     margin: 0 auto; /* Centrar el contenedor */
+   }
+   
+   .laptop1_box figure {
+     margin: 0;
+   }   
 
 #padi{
      padding-left: 1%;
@@ -801,32 +831,7 @@ ul.btn li:last-child {
      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
 }
 
-.imagenes{
-     width: 15%;
-     margin-left: 40%;
-}
-
-.laptop_box {
-     margin-right: -50px;
-     width: 120%;
-     height: auto;
-}
-
-.laptop_box figure {
-     margin: 0;
-}
-
-.margin_bottom {
-     margin-bottom: 30px;
-}
-
-.laptop .read_more {
-     display: block;
-     margin-top: 60px;
-}
-
-
-/** end laptop  section **/
+/** end laptop1  section **/
 
 
 /** customer section **/
@@ -1127,7 +1132,7 @@ ul.social_icon li a:hover {
      background: #4843a3;
 }
 
-.computer_page .laptop {
+.computer_page .laptop1 {
      margin-top: 90px;
 }
 
@@ -1168,35 +1173,35 @@ ul.social_icon li a:hover {
 /** end about **/
 
 
-/** laptop **/
+/** laptop1 **/
 
-.laptop1 {
+.laptop11 {
      background-color: #f6f6f6;
      padding: 90px 0;
 }
 
-.laptop1 .titlepage {
+.laptop11 .titlepage {
      text-align: right;
 }
 
-.laptop1 .titlepage h2 {
+.laptop11 .titlepage h2 {
      max-width: inherit;
      border: inherit;
      color: #000;
 }
 
-.laptop1 .titlepage p {
+.laptop11 .titlepage p {
      padding: 30px 0;
      color: #000;
 }
 
-.laptop1_img figure {
+.laptop11_img figure {
      margin: 0;
 }
 
-.laptop1_img figure img {
+.laptop11_img figure img {
      width: 100%;
 }
 
 
-/** end laptop **/
+/** end laptop1 **/
