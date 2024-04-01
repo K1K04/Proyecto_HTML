@@ -452,35 +452,38 @@
                          <div class="col-md-6">
                              <label for="email">Email:</label>
                              <input id="email" class="contactus" placeholder="Email" type="email" name="Email" required> 
+                             <p id="email_error" style="color: red; display: none;">Por favor, introduce un correo electrónico válido.</p>
                          </div>
                          <div class="col-md-6">
                              <label for="phone">Número de teléfono:</label>
                              <input id="phone" class="contactus" placeholder="Número de teléfono" type="tel" name="Numero_de_telefono" required>                          
+                             <p id="phone_error" style="color: red; display: none;">Por favor, introduce un número de teléfono válido (9 dígitos).</p>
                          </div>
                          <div class="col-md-6">
                              <label for="message">Mensaje:</label>
                              <textarea id="message" class="textarea" placeholder="Mensaje" name="Mensaje" required></textarea>
                          </div>
                          <div class="col-md-12">
-                           <label>Tipo de consulta:</label>
-                           <div>
-                               <input type="checkbox" id="consulta1" name="consulta[]" value="Soporte Técnico">
-                               <label for="consulta1">Soporte Técnico</label>
-                           </div>
-                           <div>
-                               <input type="checkbox" id="consulta2" name="consulta[]" value="Ventas">
-                               <label for="consulta2">Ventas</label>
-                           </div>
-                           <div>
-                               <input type="checkbox" id="consulta3" name="consulta[]" value="Otros">
-                               <label for="consulta3">Otros</label>
-                           </div>
-                       </div>
-                       
+                             <label>Tipo de consulta:</label>
+                             <div>
+                                 <input type="checkbox" id="consulta1" name="consulta[]" value="Soporte Técnico">
+                                 <label for="consulta1">Soporte Técnico</label>
+                             </div>
+                             <div>
+                                 <input type="checkbox" id="consulta2" name="consulta[]" value="Ventas">
+                                 <label for="consulta2">Ventas</label>
+                             </div>
+                             <div>
+                                 <input type="checkbox" id="consulta3" name="consulta[]" value="Otros">
+                                 <label for="consulta3">Otros</label>
+                             </div>
+                             <p id="consulta_error" style="color: red; display: none;">Selecciona al menos una opción de consulta.</p>
+                             <input type="hidden" id="consulta_hidden" name="consulta">
+                         </div>
                          <div class="col-md-12">
                              <label>¿Cómo nos encontraste?</label>
                              <div>
-                                 <input type="radio" id="buscar1" name="buscar" value="Recomendación">
+                                 <input type="radio" id="buscar1" name="buscar" value="Recomendación" required>
                                  <label for="buscar1">Recomendación</label>
                              </div>
                              <div>
@@ -491,17 +494,78 @@
                                  <input type="radio" id="buscar3" name="buscar" value="Redes Sociales">
                                  <label for="buscar3">Redes Sociales</label>
                              </div>
+                             <p id="buscar_error" style="color: red; display: none;">Selecciona cómo nos encontraste.</p>
                          </div>
                          <div class="col-md-12">
-                             <button type="submit" class="send_btn">Enviar</button>
+                             <input type="submit" class="send_btn" value="Enviar" onclick="return validateForm()">
                          </div>
                          <div>
-                           <button type="reset">
-                              <img src="./images/descarga.png" alt="imagen" width="70" height="50" style="vertical-align: middle">
-                            </button>
+                             <button type="reset">
+                                 <img src="./images/descarga.png" alt="imagen" width="70" height="50" style="vertical-align: middle">
+                             </button>
                          </div>
                      </div>
-                 </form>                 
+                 </form>
+                 
+                 <script>
+                  function validateForm() {
+                      var email = document.getElementById("email").value;
+                      var phone = document.getElementById("phone").value;
+                      var consultaCheckboxes = document.querySelectorAll('input[name="consulta[]"]:checked');
+                      var buscarRadios = document.querySelectorAll('input[name="buscar"]:checked');
+              
+                      var emailError = document.getElementById("email_error");
+                      var phoneError = document.getElementById("phone_error");
+                      var consultaError = document.getElementById("consulta_error");
+                      var buscarError = document.getElementById("buscar_error");
+              
+                      var valid = true;
+              
+                      // Validación de correo electrónico
+                      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                      if (!email || !emailPattern.test(email)) {
+                          emailError.style.display = "block";
+                          valid = false;
+                      } else {
+                          emailError.style.display = "none";
+                      }
+              
+                      // Validación de número de teléfono
+                      var phonePattern = /^\d{9}$/;
+                      if (!phone || !phonePattern.test(phone)) {
+                          phoneError.style.display = "block";
+                          valid = false;
+                      } else {
+                          phoneError.style.display = "none";
+                      }
+              
+                      // Convertir los valores de consulta en una cadena separada por comas
+                      var consultaValues = [];
+                      consultaCheckboxes.forEach(function(checkbox) {
+                          consultaValues.push(checkbox.value);
+                      });
+                      document.getElementById("consulta_hidden").value = consultaValues.join(', ');
+              
+                      // Validación de tipo de consulta
+                      if (consultaValues.length === 0) {
+                          consultaError.style.display = "block";
+                          valid = false;
+                      } else {
+                          consultaError.style.display = "none";
+                      }
+              
+                      // Validación de cómo nos encontraste
+                      if (buscarRadios.length === 0) {
+                          buscarError.style.display = "block";
+                          valid = false;
+                      } else {
+                          buscarError.style.display = "none";
+                      }
+              
+                      return valid;
+                  }
+              </script>
+              
                </div>
             </div>
          </div>
